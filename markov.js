@@ -54,7 +54,6 @@ var markov = {
     markov_chain: function() {
 	var table;
 	table = this.create_table();
-	console.log(table);
 
 	output = this.generate_text(table);
 

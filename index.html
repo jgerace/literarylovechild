@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="markov.js" type="text/javascript"></script>
+
+<head>
+    <style>
+        textarea {
+            width: 600px;
+            height: 400px;
+        }
+        
+        textarea.hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div>
+            <table>
+		<tr>
+		  <td>
+		    <div>
+		      <label>Poet 1</label>
+		      <div>
+			<select id="poet1">
+			  <option value="browning">Elizabeth Barrett Browning</option>
+			  <option value="coleridge">Samuel Taylor Coleridge</option>
+			  <option value="dickinson">Emily Dickinson</option>
+			  <option value="hardy">Thomas Hardy</option>
+			  <option value="rossetti">Christina Rossetti</option>
+			  <option value="whitman">Walt Whitman</option>
+		      </div>
+		    </div>
+		  </td>
+		</tr>
+		<tr>
+		  <td>
+		    <div>
+		      <label>Poet 2</label>
+		      <div>
+			<select id="poet2">
+			  <option value="browning">Elizabeth Barrett Browning</option>
+			  <option value="coleridge">Samuel Taylor Coleridge</option>
+			  <option value="dickinson">Emily Dickinson</option>
+			  <option value="hardy">Thomas Hardy</option>
+			  <option value="rossetti">Christina Rossetti</option>
+			  <option value="whitman">Walt Whitman</option>
+		      </div>
+		    </div>
+		  </td>
+		</tr>
+                <tr>
+                    <td>
+                        <div>
+                            <label>Number of characters to output</label>
+                            <div>
+                                <input type="number" id="input-num-chars" value=3000></input>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <div>
+        <table>
+            <tr>
+                <button type="button" onclick="markov.run()">Generate Text!</button>
+            </tr>
+            <tr>
+                <td>
+                    <textarea id="generated-text" hidden></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -15,7 +15,7 @@ var markov = {
 
     },
     getInputText: function(poet) {
-	var file_name = "./sourcetext/";
+	var file_name = "https://jgerace.gibhub.io/literarylovechild/sourcetext/";
 	switch(poet) {
 	case "dickinson":
 	    file_name += "dickinson.txt";
